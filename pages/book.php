@@ -76,10 +76,11 @@ if(isset($submitPressed)){
                         <th class=" text-center" scope="col">Cover</th>
                         <th class=" text-center" scope="col">Title</th>
                         <th class=" text-center" scope="col">Author</th>
+                        <th class=" text-center w-50" scope="col">Short Description</th>
                         <th class=" text-center" scope="col">Publisher</th>
                         <th class=" text-center" scope="col">Publish Year</th>
                         <th class=" text-center" scope="col">Nama Genre</th>
-                        <th class=" text-center w-25" scope="col">Action</th>
+                        <th class=" text-center" scope="col">Action</th>
                     </tr>
                     </thead>
                     <tbody >
@@ -87,7 +88,7 @@ if(isset($submitPressed)){
                     $result = $BookDao->fetchJoinFromDb();
                     /**  @var $book \entity\Book */
                     foreach($result as $book ){
-                        echo '<tr >';
+                        echo '<tr class="align-middle">';
                         echo '<td>'. $book->getIsbn() . '</td>';
                         if ($book->getCover() != '') {
                             echo '<td class="py-2 px-2"> <img class="rounded-3" src="./uploads/'.$book->getCover().'" style="width:100%;height:auto;max-width:500px;max-height:500px;"></td>';
@@ -98,6 +99,7 @@ if(isset($submitPressed)){
                         }
                         echo '<td >'. $book->getTitle() . '</td>';
                         echo '<td>'. $book->getAuthor() . '</td>';
+                        echo '<td>'. $book->getShort_description(). '</td>';
                         echo '<td>'. $book->getPublisher() . '</td>';
                         echo '<td>'. $book->getPublish_year() . '</td>';
                         echo '<td>'. $book->getGenre()->getName() . '</td>';

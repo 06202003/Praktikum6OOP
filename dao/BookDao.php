@@ -8,7 +8,7 @@ use dao\PDOUtil;
 class BookDao{
     public function fetchJoinFromDb(){
         $link = PDOUtil::createMySQLConnection();
-        $query = "SELECT ISBN,cover,title,author,publisher,publish_year,genre.name FROM book INNER JOIN genre WHERE book.genre_id = genre.id;";
+        $query = "SELECT ISBN,cover,title,author,short_description,publisher,publish_year,genre.name FROM book INNER JOIN genre WHERE book.genre_id = genre.id;";
         $stmt = $link->prepare($query);
         $stmt->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,'entity\Book');
         $stmt->execute();
