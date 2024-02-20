@@ -53,10 +53,14 @@ if(isset($submitPressed)){
 ?>
 
 <div class="container text-center mt-4" style="height:auto">
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary mt-5 w-75" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+Tambah Data Genre
+</button>
 <div class="row d-flex text-start justify-content-center my-3 align-items-center">
 <div class="col-md-8">
             <div class="table-responsive">        
-                <table class="table table-hover   table-bordered border-danger table-sm" id="genre">            
+                <table class="table table-hover table-bordered border-danger table-sm" id="genre">            
                     <thead>
                         <tr>
                             <th class=" text-center" scope="col">ID</th>
@@ -84,10 +88,7 @@ if(isset($submitPressed)){
             </div>
         </div>
         
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary mt-5 w-75" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Tambah Data Genre
-</button>
+
 
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

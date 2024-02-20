@@ -62,10 +62,14 @@ if(isset($submitPressed)){
 
 ?>
 <div class="container text-center mt-3 h-100 mb-5">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Tambah Data
+    </button>
     <div class="row d-flex justify-content-center align-items-center">
         <div class="col-md-12">    
             <div class="table-responsive">        
-                <table class="table table-hover  table-bordered border-danger table-sm " id="book">
+                <table class="table table-bordered table-hover responsive" style="width:100%" id="book">
                     <thead>
                     <tr>
                         <th class=" text-center" scope="col">ISBN</th>
@@ -75,7 +79,7 @@ if(isset($submitPressed)){
                         <th class=" text-center" scope="col">Publisher</th>
                         <th class=" text-center" scope="col">Publish Year</th>
                         <th class=" text-center" scope="col">Nama Genre</th>
-                        <th class=" text-center w-50" scope="col">Action</th>
+                        <th class=" text-center w-25" scope="col">Action</th>
                     </tr>
                     </thead>
                     <tbody >
@@ -112,10 +116,7 @@ if(isset($submitPressed)){
        </div>
                 
     
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary w-100 my-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Tambah Data
-</button>
+
 
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -153,10 +154,10 @@ if(isset($submitPressed)){
                 <textarea  rows="4" type="textarea" class="form-control" name="shortDesc" id="shortDesc" maxlength="300" required autofocus placeholder="Short Description" >
                 </textarea>
             </div>
-            <div class="mb-3">
+            <!-- <div class="mb-3">
                 <label for="cover" class="form-label">Cover</label>
                 <input type="text" class="form-control" name="cover" id="cover" maxlength="100"  autofocus placeholder="Cover">
-            </div>
+            </div> -->
             <div class="mb-3">
                 <label for="IDgenre" class="form-label">Genre Name</label>
                 <select class="form-select" name="idGenre" aria-label="Default select example">
